@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "7f378a81-ff5e-4878-a271-6eb0fad87cd9",
+		"name": "DB_MS-CARS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28408440"
+	},
+	"item": [
+		{
+			"name": "POST_CARS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"brand\" : \"Volkswagen\",\r\n    \"model\" : \"Gol\",\r\n    \"pilot\" : \"Deco\",\r\n    \"year\" : \"2020\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cars/post",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_CARS 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"brand\" : \"Fiat\",\r\n    \"model\" : \"palio\",\r\n    \"pilot\" : \"Tico\",\r\n    \"year\" : \"2021\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cars/post",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_BY_CARS_ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cars/get/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars",
+						"get",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GEALL_CARS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cars/getAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_CARS",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"firstName\" : \"Andre\",\r\n    \"lastName\" : \"Souza\",\r\n    \"email\" : \"andre@compasso.com\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cars/delete/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars",
+						"delete",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE_STUDENT Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"brand\" : \"Volkswagen\",\r\n    \"model\" : \"Golf\",\r\n    \"pilot\" : \"Dequinho\",\r\n    \"year\" : \"2021\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cars/put/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars",
+						"put",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
