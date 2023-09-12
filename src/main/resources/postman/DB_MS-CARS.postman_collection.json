@@ -83,7 +83,7 @@
 			"response": []
 		},
 		{
-			"name": "GEALL_CARS",
+			"name": "GETALL_CARS",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -131,7 +131,7 @@
 			"response": []
 		},
 		{
-			"name": "UPDATE_STUDENT Copy",
+			"name": "UPDATE_CARS",
 			"request": {
 				"method": "PUT",
 				"header": [],

@@ -1,10 +1,7 @@
 package com.andre.souza.race.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
@@ -14,6 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 @Entity
 @Table(name = "db_ms-cars")
+@Builder
         public class Cars {
 
 
