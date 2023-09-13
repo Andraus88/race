@@ -32,7 +32,7 @@ All endpoints and resources are clearly defined, with a consistent naming patter
 Many tests are running, covering 85% of Lines. These tests include all Controllers "/Put", all Servies "save", "getById", "getAll", "delete" and "update".
 MongoDB is in use to save all Cars, Swagger is implemented for  documentation.
 
-> Note: Due to personal constraints and unfamiliarity utilization of RabbitMQ the ms-races and ms-history features are yet to be implemented.
+> Note: Due to personal constraints and unfamiliarity in utilization of RabbitMQ the ms-races and ms-history features are yet to be implemented.
 
 ```sh
 The API is versioned 0.0.3-SNAPSHOT
