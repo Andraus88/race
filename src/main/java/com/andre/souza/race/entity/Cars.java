@@ -18,8 +18,8 @@ import java.io.Serializable;
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long CarsId;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private String CarsId;
     @Column(nullable = false, unique = true)
     private String brand;
     @Column(nullable = false, unique = true)

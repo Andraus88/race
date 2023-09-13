@@ -36,7 +36,7 @@ public class CarsService {
         return carsDtoRequest;
     }
 
-    public CarsDtoResponse getByID(Long carsId) {
+    public CarsDtoResponse getByID(String carsId) {
         Cars cars =
                 carsRepository.findById(carsId).orElseThrow(() -> new NotFoundException("Id Not Found"));
 
@@ -66,7 +66,7 @@ public class CarsService {
         return carDtoResponses;
     }
 
-    public CarsDtoRequest delete(Long carsId) throws NotFoundException {
+    public CarsDtoRequest delete(String carsId) throws NotFoundException {
 
         Cars cars = carsRepository.findById(carsId).orElseThrow(() -> new NotFoundException("Car with carsId " + carsId + " not found"));
 
@@ -75,7 +75,7 @@ public class CarsService {
         return new CarsDtoRequest();
     }
 
-    public CarsDtoRequest updateCar(@PathVariable("carsId") Long carsId, @RequestBody CarsDtoRequest carsDtoRequest) throws NotFoundException {
+    public CarsDtoRequest updateCar(@PathVariable("carsId") String carsId, @RequestBody CarsDtoRequest carsDtoRequest) throws NotFoundException {
 
         Cars cars = carsRepository.findById(carsId).orElseThrow(() -> new NotFoundException("Car with carsId " + carsId + " not found"));
 

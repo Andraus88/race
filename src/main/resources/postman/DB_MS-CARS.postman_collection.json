@@ -68,7 +68,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/cars/get/1",
+					"raw": "localhost:8080/cars/get/6501cffb0747c26f205d36d7",
 					"host": [
 						"localhost"
 					],
@@ -116,7 +116,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/cars/delete/2",
+					"raw": "localhost:8080/cars/delete/6501cffb0747c26f205d36d7",
 					"host": [
 						"localhost"
 					],
@@ -145,7 +145,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/cars/put/1",
+					"raw": "localhost:8080/cars/put/6501cffb0747c26f205d36d7",
 					"host": [
 						"localhost"
 					],

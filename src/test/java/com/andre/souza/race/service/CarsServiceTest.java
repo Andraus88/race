@@ -73,18 +73,17 @@ public class CarsServiceTest {
     void getByID() throws NotFoundException {
 
         //given
-        Long idCar = 1L;
+        String carsId = "1";
         Cars car = new Cars();
-        car.setCarsId(idCar);
         car.setBrand("Honda");
         car.setModel("Civic");
         car.setPilot("Pedro");
         car.setYear(2020L);
 
-        when(carsRepository.findById(idCar)).thenReturn(Optional.of(car));
+        when(carsRepository.findById(carsId)).thenReturn(Optional.of(car));
 
         //when
-        CarsDtoResponse carsDtoResponse = carsService.getByID(idCar);
+        CarsDtoResponse carsDtoResponse = carsService.getByID(carsId);
 
         //then
         assertEquals(car.getCarsId(), carsDtoResponse.getCarsId());
@@ -94,7 +93,7 @@ public class CarsServiceTest {
         assertEquals(car.getYear(), carsDtoResponse.getYear());
 
         //verify
-        Mockito.verify(carsRepository).findById(idCar);
+        Mockito.verify(carsRepository).findById(carsId);
     }
 
     @Test
@@ -102,14 +101,12 @@ public class CarsServiceTest {
         //given
         List<Cars> cars = new ArrayList<>();
         Cars car1 = new Cars();
-        car1.setCarsId(1L);
         car1.setBrand("Honda");
         car1.setModel("Civic");
         car1.setPilot("Pedro");
         car1.setYear(2023L);
 
         Cars car2 = new Cars();
-        car2.setCarsId(2L);
         car2.setBrand("Toyota");
         car2.setModel("Corolla");
         car2.setPilot("Jorge");
@@ -134,19 +131,18 @@ public class CarsServiceTest {
     @Test
     void delete() {
         //given
-        Long idCar = 1L;
+        String carsId = "1";
 
         Cars car = new Cars();
-        car.setCarsId(idCar);
         car.setBrand("Honda");
         car.setModel("Civic");
         car.setPilot("Pedro");
         car.setYear(2023L );
 
-        when(carsRepository.findById(idCar)).thenReturn(Optional.of(car));
+        when(carsRepository.findById(carsId)).thenReturn(Optional.of(car));
 
         //when
-        carsService.delete(idCar);
+        carsService.delete(carsId);
 
         //then
         Mockito.verify(carsRepository).delete(car);
@@ -155,7 +151,7 @@ public class CarsServiceTest {
     @Test
     void updateCar() {
         //given
-        Long idCar = 1L;
+        String carsId = "1";
         CarsDtoRequest carsDtoRequest = new CarsDtoRequest();
         carsDtoRequest.setBrand("Toyota");
         carsDtoRequest.setModel("Corolla");
@@ -163,16 +159,15 @@ public class CarsServiceTest {
         carsDtoRequest.setYear(2022L);
 
         Cars car = new Cars();
-        car.setCarsId(idCar);
         car.setBrand("Honda");
         car.setModel("Civic");
         car.setPilot("John Doe");
         car.setYear(2023L);
 
-        when(carsRepository.findById(idCar)).thenReturn(Optional.of(car));
+        when(carsRepository.findById(carsId)).thenReturn(Optional.of(car));
 
         //when
-        carsService.updateCar(idCar, carsDtoRequest);
+        carsService.updateCar(carsId, carsDtoRequest);
 
         //then
         Mockito.verify(carsRepository).save(car);

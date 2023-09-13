@@ -24,7 +24,7 @@ public class CarsController {
         return carsService.save(carsDtoRequest);
     }
     @GetMapping("/get/{carsId}")
-    public CarsDtoResponse get(@PathVariable Long carsId) {
+    public CarsDtoResponse get(@PathVariable String carsId) {
         return carsService.getByID(carsId);
     }
 
@@ -35,12 +35,12 @@ public class CarsController {
     }
 
     @DeleteMapping("/delete/{carsId}")
-    public CarsDtoRequest deleteCar(@PathVariable("carsId") Long carsId) throws NotFoundException {
+    public CarsDtoRequest deleteCar(@PathVariable("carsId") String carsId) throws NotFoundException {
         return carsService.delete(carsId);
     }
 
     @PutMapping("/put/{carsId}")
-    public CarsDtoRequest updateCar(@PathVariable("carsId") Long carsId, @RequestBody CarsDtoRequest carsDtoRequest) throws NotFoundException {
+    public CarsDtoRequest updateCar(@PathVariable("carsId") String carsId, @RequestBody CarsDtoRequest carsDtoRequest) throws NotFoundException {
         return carsService.updateCar(carsId, carsDtoRequest);
     }
 
