@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CarsDtoResponse {
 
-    private Long id;
+    private Long carsId;
 
     private String brand;
 

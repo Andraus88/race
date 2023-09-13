@@ -7,8 +7,6 @@ import jakarta.validation.constraints.NotEmpty;
 @Data
 public class CarsDtoRequest {
 
-    private long id;
-
     @NotEmpty(message = "Brand should not be null or empty and must be unique")
     private String brand;
 

@@ -75,7 +75,7 @@ public class CarsServiceTest {
         //given
         Long idCar = 1L;
         Cars car = new Cars();
-        car.setId(idCar);
+        car.setCarsId(idCar);
         car.setBrand("Honda");
         car.setModel("Civic");
         car.setPilot("Pedro");
@@ -87,7 +87,7 @@ public class CarsServiceTest {
         CarsDtoResponse carsDtoResponse = carsService.getByID(idCar);
 
         //then
-        assertEquals(car.getId(), carsDtoResponse.getId());
+        assertEquals(car.getCarsId(), carsDtoResponse.getCarsId());
         assertEquals(car.getBrand(), carsDtoResponse.getBrand());
         assertEquals(car.getModel(), carsDtoResponse.getModel());
         assertEquals(car.getPilot(), carsDtoResponse.getPilot());
@@ -102,14 +102,14 @@ public class CarsServiceTest {
         //given
         List<Cars> cars = new ArrayList<>();
         Cars car1 = new Cars();
-        car1.setId(1L);
+        car1.setCarsId(1L);
         car1.setBrand("Honda");
         car1.setModel("Civic");
         car1.setPilot("Pedro");
         car1.setYear(2023L);
 
         Cars car2 = new Cars();
-        car2.setId(2L);
+        car2.setCarsId(2L);
         car2.setBrand("Toyota");
         car2.setModel("Corolla");
         car2.setPilot("Jorge");
@@ -137,7 +137,7 @@ public class CarsServiceTest {
         Long idCar = 1L;
 
         Cars car = new Cars();
-        car.setId(idCar);
+        car.setCarsId(idCar);
         car.setBrand("Honda");
         car.setModel("Civic");
         car.setPilot("Pedro");
@@ -163,7 +163,7 @@ public class CarsServiceTest {
         carsDtoRequest.setYear(2022L);
 
         Cars car = new Cars();
-        car.setId(idCar);
+        car.setCarsId(idCar);
         car.setBrand("Honda");
         car.setModel("Civic");
         car.setPilot("John Doe");

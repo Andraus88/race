@@ -4,20 +4,22 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.Serializable;
+
 @Document
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "db_ms-cars")
+@Table(name = "cars")
 @Builder
-        public class Cars {
+        public class Cars implements Serializable {
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long CarsId;
     @Column(nullable = false, unique = true)
     private String brand;
     @Column(nullable = false, unique = true)

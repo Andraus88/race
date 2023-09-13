@@ -21,7 +21,7 @@ public class CarsService {
 
     public CarsDtoRequest save(CarsDtoRequest carsDtoRequest) throws NotAllowedException {
         Cars cars = new Cars();
-        cars.setId(null);
+        cars.setCarsId(null);
         cars.setBrand(carsDtoRequest.getBrand());
         cars.setModel(carsDtoRequest.getModel());
         cars.setPilot(carsDtoRequest.getPilot());
@@ -36,12 +36,12 @@ public class CarsService {
         return carsDtoRequest;
     }
 
-    public CarsDtoResponse getByID(Long id) {
+    public CarsDtoResponse getByID(Long carsId) {
         Cars cars =
-                carsRepository.findById(id).orElseThrow(() -> new NotFoundException("Id Not Found"));
+                carsRepository.findById(carsId).orElseThrow(() -> new NotFoundException("Id Not Found"));
 
         CarsDtoResponse carsDtoResponse = new CarsDtoResponse(
-                cars.getId(),
+                cars.getCarsId(),
                 cars.getBrand(),
                 cars.getModel(),
                 cars.getPilot(),
@@ -55,7 +55,7 @@ public class CarsService {
         List<CarsDtoResponse> carDtoResponses = new ArrayList<>();
         for (Cars car : cars) {
             CarsDtoResponse carsDtoResponse = new CarsDtoResponse(
-                    car.getId(),
+                    car.getCarsId(),
                     car.getBrand(),
                     car.getModel(),
                     car.getPilot(),
@@ -66,18 +66,18 @@ public class CarsService {
         return carDtoResponses;
     }
 
-    public CarsDtoRequest delete(Long id) throws NotFoundException {
+    public CarsDtoRequest delete(Long carsId) throws NotFoundException {
 
-        Cars cars = carsRepository.findById(id).orElseThrow(() -> new NotFoundException("Car with id " + id + " not found"));
+        Cars cars = carsRepository.findById(carsId).orElseThrow(() -> new NotFoundException("Car with carsId " + carsId + " not found"));
 
         carsRepository.delete(cars);
 
         return new CarsDtoRequest();
     }
 
-    public CarsDtoRequest updateCar(@PathVariable("id") Long id, @RequestBody CarsDtoRequest carsDtoRequest) throws NotFoundException {
+    public CarsDtoRequest updateCar(@PathVariable("carsId") Long carsId, @RequestBody CarsDtoRequest carsDtoRequest) throws NotFoundException {
 
-        Cars cars = carsRepository.findById(id).orElseThrow(() -> new NotFoundException("Car with id " + id + " not found"));
+        Cars cars = carsRepository.findById(carsId).orElseThrow(() -> new NotFoundException("Car with carsId " + carsId + " not found"));
 
         cars.setBrand(carsDtoRequest.getBrand());
         cars.setModel(carsDtoRequest.getModel());
