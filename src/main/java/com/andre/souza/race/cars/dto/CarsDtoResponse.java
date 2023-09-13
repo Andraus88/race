@@ -1,4 +1,4 @@
-package com.andre.souza.race.dto;
+package com.andre.souza.race.cars.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,10 +1,11 @@
-package com.andre.souza.race.service;
+package com.andre.souza.race.cars.service;
 
-import com.andre.souza.race.dto.CarsDtoRequest;
-import com.andre.souza.race.dto.CarsDtoResponse;
-import com.andre.souza.race.entity.Cars;
+import com.andre.souza.race.cars.dto.CarsDtoRequest;
+import com.andre.souza.race.cars.dto.CarsDtoResponse;
+import com.andre.souza.race.cars.entity.Cars;
+import com.andre.souza.race.cars.service.CarsService;
 import com.andre.souza.race.exception.NotFoundException;
-import com.andre.souza.race.repository.CarsRepository;
+import com.andre.souza.race.cars.repository.CarsRepository;
 import com.andre.souza.race.utils.JsonUtils;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.AfterEach;

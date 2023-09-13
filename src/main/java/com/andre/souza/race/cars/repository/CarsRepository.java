@@ -1,6 +1,6 @@
-package com.andre.souza.race.repository;
+package com.andre.souza.race.cars.repository;
 
-import com.andre.souza.race.entity.Cars;
+import com.andre.souza.race.cars.entity.Cars;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

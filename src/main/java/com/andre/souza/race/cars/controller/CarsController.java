@@ -1,10 +1,10 @@
-package com.andre.souza.race.controller;
+package com.andre.souza.race.cars.controller;
 
-import com.andre.souza.race.dto.CarsDtoRequest;
-import com.andre.souza.race.dto.CarsDtoResponse;
+import com.andre.souza.race.cars.dto.CarsDtoRequest;
+import com.andre.souza.race.cars.dto.CarsDtoResponse;
 import com.andre.souza.race.exception.NotAllowedException;
 import com.andre.souza.race.exception.NotFoundException;
-import com.andre.souza.race.service.CarsService;
+import com.andre.souza.race.cars.service.CarsService;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package com.andre.souza.race.entity;
+package com.andre.souza.race.cars.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
